@@ -1,0 +1,42 @@
+graph -> graph_definition '{' body '}'
+body -> declaration body
+body -> assignment body
+body -> ε
+assignment -> definition '=' object ';'
+declaration -> definition ';'
+graph_definition -> graph_type var_name
+definiton -> type_name var_name
+graph_type -> 'dgraph'
+graph_type -> 'ugraph'
+type_name -> 'vertex'
+type_name -> 'edge'
+object -> '{' '}'
+object -> '{' members '}'
+members -> pair
+members -> pair ',' members
+pair -> string ':' value
+array -> '[' ']'
+array -> '[' elements ']'
+elements -> value
+elements -> value ',' elements
+value -> string
+value -> number
+value -> object
+value -> array
+value -> true
+value -> false
+value -> null
+
+
+/*
+dgraph g1 {
+	vertex v1;
+	edge e1;
+	
+	vertex v2 = {
+	...
+	};
+	
+	
+}
+*/

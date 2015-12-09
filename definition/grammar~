@@ -1,0 +1,17 @@
+graph_def -> definition '{' body '}'
+body -> declaration body
+body -> assignment body
+body -> ε
+declaration -> definition ';'
+definiton -> type_name var_name
+
+dgraph g1 {
+	vertex v1;
+	edge e1;
+	
+	vertex v2 = {
+	...
+	};
+	
+	
+}
