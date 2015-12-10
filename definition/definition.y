@@ -16,6 +16,33 @@
 %token ASSIGN
 %token COLON
 %token SEMICOLON
+%token IDENTIFIER
+
+%union 
+{
+  char * string;
+  int integer;
+  float float;
+}
+
+// Define the token value types
+
+%type <integer> INTEGER 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+%type <> 
+
 %% //after this, CFG rules
 
 graph :
@@ -65,7 +92,7 @@ members :
 	;
 
 pair : 
-	 string COLON value
+	 STRING COLON value
 	;
 
 array :
@@ -86,11 +113,15 @@ value :
 	| array
 	;
 
+var_name :
+	IDENTIFIER
+	;
+
 %% //other C code
 
-void yyerror(char *s) {
+/*void yyerror(char *s) {
  fprintf(stderr, "line %d: %s\n", yylineno, s);
-}
+}*/
 
 /*
 graph -> graph_definition '{' body '}'

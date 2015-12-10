@@ -51,7 +51,8 @@ EDGE edge
 	 print(0,"UGRAPH");
 	 return DGRAPH;
 }		
-{VERTEX}{
+
+{VERTEX} {
 	 print(0,"VERTEX");
 	 return VERTEX;
 }	
@@ -76,7 +77,7 @@ EDGE edge
 	return FLOAT ;
 }
 
-{STRING}{ 
+{STRING} { 
 	print (1,"STRING");
 	return STRING;
 } 
@@ -86,7 +87,7 @@ EDGE edge
 	return LPARAM;
 }
 
-{RPARAM}{ 
+{RPARAM} { 
 	print(1, "RPARAM");
 	return RPARAM;
 } 
@@ -125,7 +126,7 @@ EDGE edge
 	return COLON ;
 }
 
-{SEMICOLON}{ 
+{SEMICOLON} { 
 	print(1, "SEMICOLON");
 	return SEMICOLON;
 }
