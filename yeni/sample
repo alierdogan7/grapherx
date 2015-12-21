@@ -1,0 +1,42 @@
+dgraph mygraph {
+	/* KOMMENTO */ 
+	vertex v1 = {
+		"label": "mylabel",
+		"name": "Ali Burak",
+		"listdeneme": ["abc", 2, 3],
+		"my_map_of_lists": 
+		{ 
+			["abc", "def"],
+			[ 1, 2, 3],
+			[ ]
+		}
+	};
+	
+	vertex v2 = {
+		"label": "ver2",
+		"name": "Ömer"
+	};
+	
+	vertex v3 = {
+		"label": "ver3",
+		"name": "Orhun"/*
+		THIS IS 
+		A MULTILINE
+		COMMENT TEST*/
+	};
+
+	edge e1 = {
+		"source": "v1",
+		"destination": "v2",
+		"weight": 3,
+		"relation": "FRIEND"
+	};
+	
+	edge e2 = {
+		"source": "v3",
+		"destination": "v2",
+		"weight": 2,
+		"relation": "ENEMY"
+	};
+	
+}
