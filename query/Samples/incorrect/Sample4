@@ -1,0 +1,6 @@
+/*Error: Syntax error in query (([e1] - (A) > (B)) should be ((A) - [e1] > (B)))  line 2  */
+MATCH ([e1] - (A) > (B)) -> ((B) - [e2] > (C))->((C) - [e3] > (D))
+FROM myGraph	
+WHERE A.name = "CS"
+	e2.code = "315"
+	D.kind = "rulez!";

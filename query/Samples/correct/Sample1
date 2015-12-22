@@ -1,0 +1,4 @@
+/*A simple query */
+query q1 = MATCH (b) - [e1] > (c)
+FROM myGraph1
+WHERE e1.relation= "STUDENT_OF";

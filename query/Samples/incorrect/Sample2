@@ -1,0 +1,6 @@
+/*Error: specifying graph name as string line 3  */
+MATCH ((A) - [e1] > (B)) -> ((B) - [e2] > (C))->((C) - [e3] > (D))
+FROM "myGraph"	
+WHERE A.name = "CS"
+	e2.code = "315"
+	D.kind = "rulez!";

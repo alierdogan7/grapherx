@@ -1,0 +1,5 @@
+MATCH ( (b) - [e1] > (c) ) -> ( ( (c) - [e2] > (d) )* | ( (c) - [e3] > (e) )* )	
+FROM myGraph2
+WHERE e1.relation = "STUDENT_OF"
+   e2.relation = "FRIEND_OF"
+   e3.relation = "ENEMY_OF";

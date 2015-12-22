@@ -1,0 +1,6 @@
+/*mistyping of key word MATCH  */
+MATCh ((A) - [e1] > (B)) -> ((B) - [e2] > (C))->((C) - [e3] > (D))
+FROM myGraph2	
+WHERE A.name = "CS"
+	e2.code = "315"
+	D.kind = "rulez!";

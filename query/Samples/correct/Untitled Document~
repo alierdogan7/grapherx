@@ -1,0 +1,3 @@
+query q1 = MATCH (b) - [e1] > (c)
+					FROM my_graph
+	WHERE e1.relation= “STUDENT_OF”;

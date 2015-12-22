@@ -1,0 +1,14 @@
+all: lexer parser
+	g++ y.tab.c lex.yy.c -o query_parser
+	
+lexer: qparser.l
+	flex qparser.l
+
+parser: qparser.y
+	yacc -d qparser.y
+
+clean:
+	rm -f *.lex.c *.tab.c *.tab.h lex.yy.c *.o json query_parser
+
+test: input
+		cat input | ./query_parser
