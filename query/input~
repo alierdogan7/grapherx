@@ -1,12 +1,6 @@
-/*making more than one queries */
-query q1 = MATCH (b) - [e1] > (c)
-FROM graph1
-WHERE e1.relation= "STUDENT_OF";
-
-query q2 = MATCH (c) - [e2] > (d)
-FROM graph1
-WHERE e2.relation= "FRIEND_OF";
-
-query q3 = MATCH (c) - [e3] > (e)
-FROM graph1
-WHERE e3.relation= "ENEMY_OF";
+/*Error: '$' sign is forgotten in line 6 */
+MATCH ((A) - [e1] > (B)) -> ((B) - [e2] > (C))->((C) - [e3] > (D))
+FROM myGraph2	
+WHERE A.name = $myname
+	e2.code = $mycode
+	D.kind = mykind;

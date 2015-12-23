@@ -1,4 +1,4 @@
-/*mistyping of key word MATCH  */
+/*Error: mistyping of key word MATCH  line 1 */
 MATCh ((A) - [e1] > (B)) -> ((B) - [e2] > (C))->((C) - [e3] > (D))
 FROM myGraph2	
 WHERE A.name = "CS"

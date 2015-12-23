@@ -41,6 +41,7 @@ DOT \.
 KLEENE \*
 ALTERATION \|
 RCARAT \>
+DOLLAR \$
 
 %x IN_COMMENT 
 
@@ -83,6 +84,7 @@ RCARAT \>
 {SEMICOLON} return (SEMICOLON);
 {RCARAT} return (RCARAT);
 {RELATION} return(RELATION);
+{DOLLAR} return (DOLLAR);
 [\n] {}
 %%
 

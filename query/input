@@ -1,6 +1,6 @@
-/*Making query with user defined variables(name,code,kind)*/
+/*Making query with user defined variables*/
 MATCH ((A) - [e1] > (B)) -> ((B) - [e2] > (C))->((C) - [e3] > (D))
 FROM myGraph2	
-WHERE A.name = "CS"
-	e2.code = "315"
-	D.kind = "rulez!";
+WHERE A.name = $name2
+	e2.code = $mycode
+	D.kind = $specificKind;

@@ -20,6 +20,7 @@
 %token EDGE 
 %token RQUERY
 %token RCARAT
+%token DOLLAR
 
 %union 
 {
@@ -115,7 +116,7 @@ relation_definition:
 
 assignment:
 		STRING
-		|ID
+		|DOLLAR ID
 		;
 
 
