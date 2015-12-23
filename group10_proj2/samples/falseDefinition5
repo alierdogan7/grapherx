@@ -1,0 +1,11 @@
+dgraph mygraph {
+	/* KOMMENTO  */
+	
+	
+	vertex 1stvertex = {
+		"label": "ver2",
+		"name": "berk" 
+	};
+	
+	
+}

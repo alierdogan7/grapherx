@@ -1,0 +1,6 @@
+/*Error: '$' sign is forgotten in line 6 */
+MATCH ((A) - [e1] > (B)) -> ((B) - [e2] > (C))->((C) - [e3] > (D))
+FROM myGraph2	
+WHERE A.name = $myname
+	e2.code = $mycode
+	D.kind = mykind;

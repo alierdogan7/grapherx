@@ -1,0 +1,7 @@
+The most major problem was that we didn't know how to use lex and yacc properly. So, we had to learn yacc and lex from the tutorial on the web and the course notes.
+
+Designing the language was another problem. The grammar rules were challenging to define since the language we were designing was not a familiar language type to us.
+
+We had debugging problems when coding the yacc parser since we hadn't used the yacc before.
+
+We made use of JSON yacc parser that we found on GitHub. The definition language of ours had many similarities with JSON format. 

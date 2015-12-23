@@ -1,0 +1,31 @@
+document -->	graph document | ε
+
+graph  -->	 graph_definition LBRACE body RBRACE 
+
+body  -->	 declaration body | assignment body | ε
+
+assignment -->  definition ASSIGN object SEMICOLON
+
+declaration  -->	 definition SEMICOLON
+
+graph_definition  -->	 graph_type var_name 
+
+definition  -->	 type_name var_name
+
+graph_type -->	 DGRAPH | UGRAPH
+
+type_name  -->	 VERTEX	| EDGE
+
+object  -->	 LBRACE RBRACE	| LBRACE members RBRACE
+
+members  --> pair	| pair COMMA members
+
+pair --> STRING COLON value 
+
+array  -->	 LBRACKET RBRACKET | LBRACKET elements RBRACKET
+
+elements  --> value	| value COMMA elements
+
+value  -->	 STRING	| INTEGER 	| FLOAT	| object	| array
+
+var_name  -->	ID

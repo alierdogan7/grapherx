@@ -1,0 +1,20 @@
+ugraph myUndirectedGraph {
+	/* KOMMENTO */ 
+	
+	vertex v1;
+	vertex v2;
+	edge e1;
+	
+	vertex v3 = {
+		"label": "ver3",
+		"names": ["naber", "omer", "sus"]
+	};
+
+	edge e2 = {
+		"source": "v3",
+		"destination": "v2",
+		"weight": 2,
+		"relation": "ENEMY"
+	};
+	
+}

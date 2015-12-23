@@ -1,0 +1,22 @@
+dgraph mygraph {
+	/* KOMMENTO  
+	
+	vertex v1 = {
+		"label": "mylabel",
+		"name": "Ali Burak",
+		"listdeneme": ["abc", 2, 3]
+	};
+	
+	vertex v2 = {
+		"label": "ver2",
+		"name": "Ömer"
+	};
+	
+	edge myedge = {
+		"source": "v1",
+		"destination": "v2",
+		"weight": 3,
+		"relation": "FRIEND"
+	};
+	
+}

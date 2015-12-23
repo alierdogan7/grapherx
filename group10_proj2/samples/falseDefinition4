@@ -1,0 +1,17 @@
+dgraph mygraph {
+	/* KOMMENTO  */
+	
+	
+	vertex v2 = {
+		"label": "ver2",
+		"name": 
+	};
+	
+	edge myedge = {
+		"source": "v1",
+		"destination": "v2",
+		"weight": 3,
+		"relation": "FRIEND"
+	};
+	
+}

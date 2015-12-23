@@ -1,0 +1,271 @@
+//////////////////////////////////
+//output for correctDefinition1
+//////////////////////////////////
+
+DGRAPH IDENTIFIER LBRACE 
+COMMENT 
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING COMMA 
+STRING COLON LBRACKET STRING COMMA INTEGER COMMA INTEGER RBRACKET 
+RBRACE SEMICOLON 
+
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING 
+RBRACE SEMICOLON 
+
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING 
+COMMENT 
+RBRACE SEMICOLON 
+
+EDGE IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING COMMA 
+STRING COLON INTEGER COMMA 
+STRING COLON STRING 
+RBRACE SEMICOLON 
+
+EDGE IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING COMMA 
+STRING COLON INTEGER COMMA 
+STRING COLON STRING 
+RBRACE SEMICOLON 
+
+RBRACE 
+Successfully parsed
+
+
+//////////////////////////////////
+//output for correctDefinition2
+//////////////////////////////////
+
+UGRAPH IDENTIFIER LBRACE 
+COMMENT 
+
+VERTEX IDENTIFIER SEMICOLON 
+VERTEX IDENTIFIER SEMICOLON 
+EDGE IDENTIFIER SEMICOLON 
+
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON LBRACKET STRING COMMA STRING COMMA STRING RBRACKET 
+RBRACE SEMICOLON 
+
+EDGE IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING COMMA 
+STRING COLON INTEGER COMMA 
+STRING COLON STRING 
+RBRACE SEMICOLON 
+
+RBRACE 
+Successfully parsed
+
+
+//////////////////////////////////
+//output for correctDefinition3
+//////////////////////////////////
+
+DGRAPH IDENTIFIER LBRACE 
+COMMENT 
+
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING 
+RBRACE SEMICOLON 
+
+VERTEX IDENTIFIER SEMICOLON 
+EDGE IDENTIFIER SEMICOLON 
+
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON LBRACKET INTEGER COMMA INTEGER COMMA INTEGER RBRACKET 
+RBRACE SEMICOLON 
+
+EDGE IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING COMMA 
+STRING COLON INTEGER COMMA 
+STRING COLON STRING 
+RBRACE SEMICOLON 
+
+RBRACE 
+
+DGRAPH IDENTIFIER LBRACE 
+COMMENT 
+
+VERTEX IDENTIFIER SEMICOLON 
+VERTEX IDENTIFIER SEMICOLON 
+EDGE IDENTIFIER SEMICOLON 
+
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+
+COMMENT 
+STRING COLON LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON INTEGER 
+RBRACE 
+RBRACE SEMICOLON 
+
+EDGE IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING COMMA 
+STRING COLON INTEGER COMMA 
+STRING COLON STRING 
+RBRACE SEMICOLON 
+
+RBRACE 
+
+UGRAPH IDENTIFIER LBRACE 
+COMMENT 
+
+VERTEX IDENTIFIER SEMICOLON 
+VERTEX IDENTIFIER SEMICOLON 
+EDGE IDENTIFIER SEMICOLON 
+
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON LBRACKET STRING COMMA STRING COMMA STRING RBRACKET 
+RBRACE SEMICOLON 
+
+EDGE IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING COMMA 
+STRING COLON INTEGER COMMA 
+STRING COLON STRING 
+RBRACE SEMICOLON 
+
+RBRACE 
+Successfully parsed
+
+//////////////////////////////////
+//output for falseDefinition1
+// IT HAS AN UNCLOSED COMMENT ERROR
+//////////////////////////////////
+
+DGRAPH IDENTIFIER LBRACE 
+error at line 23: syntax error
+Parsing completed with 1 errors
+
+
+//////////////////////////////////
+//output for falseDefinition2
+// MISSING SEMICOLON AT VERTEX DECLARATION
+//////////////////////////////////
+
+DGRAPH IDENTIFIER LBRACE 
+COMMENT 
+
+VERTEX IDENTIFIER ASSIGN LBRACE 
+STRING COLON STRING COMMA 
+STRING COLON STRING COMMA 
+STRING COLON LBRACKET STRING COMMA INTEGER COMMA INTEGER RBRACKET 
+RBRACE 
+
+VERTEX error at line 10: syntax error
+Parsing completed with 1 errors
+
+
+//////////////////////////////////
+//output for falseDefinition3
+// MISSPELLED GRAPH TYPE (CASE-SENSITIVITY)
+//////////////////////////////////
+
+IDENTIFIER error at line 1: syntax error
+Parsing completed with 1 errors
+
+
+//////////////////////////////////
+//output for falseDefinition4
+// MISSING PROPERTY VALUE AFTER COLON
+//////////////////////////////////
+
+DGRAPH IDENTIFIER LBRACE COMMENT VERTEX IDENTIFIER ASSIGN LBRACE STRING COLON STRING COMMA STRING COLON RBRACE error at line 8: syntax error
+
+
+
+//////////////////////////////////
+//output for falseDefinition5
+// WRONG IDENTIFIER NAME. IT CANNOT START WITH A DIGIT
+//////////////////////////////////
+
+DGRAPH IDENTIFIER LBRACE COMMENT VERTEX INTEGER error at line 5: syntax error
+
+
+
+//////////////////////////////////
+//output for correctQuery1
+//////////////////////////////////
+
+Successfully parsed
+
+
+//////////////////////////////////
+//output for correctQuery2
+//////////////////////////////////
+
+Successfully parsed
+
+
+//////////////////////////////////
+//output for correctQuery3
+//////////////////////////////////
+
+Successfully parsed
+
+
+//////////////////////////////////
+//output for correctQuery4
+//////////////////////////////////
+
+Successfully parsed
+
+//////////////////////////////////
+//output for correctQuery5
+//////////////////////////////////
+
+Successfully parsed
+
+
+//////////////////////////////////
+//output for falseQuery1
+//Error: '$' sign is forgotten in line 6 
+//////////////////////////////////
+
+error at line 6: syntax error
+
+
+//////////////////////////////////
+//output for falseQuery2
+///*Error: specifying graph name as string line 3  */
+//////////////////////////////////
+
+error at line 3: syntax error
+
+
+//////////////////////////////////
+//output for falseQuery3
+// Error: Failing to assign relation line 6 
+//////////////////////////////////
+
+error at line 6: syntax error
+
+
+//////////////////////////////////
+//output for falseQuery4
+// Error: Syntax error in query (([e1] - (A) > (B)) should be ((A) - [e1] > (B)))  line 2 
+//////////////////////////////////
+
+error at line 2: syntax error
+
+
+//////////////////////////////////
+//output for falseQuery5
+// No operator is specified between first paths in second line 
+//////////////////////////////////
+
+error at line 2: syntax error

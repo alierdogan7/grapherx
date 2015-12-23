@@ -1,0 +1,70 @@
+dgraph myDgraph1 {
+	/* KOMMENTO */ 
+	
+	vertex v1 = {
+		"name": "orhun"
+	};
+	
+	vertex v2;
+	edge e1;
+	
+	vertex v3 = {
+		"label": "ver3",
+		"ages": [13, 2, 5]
+	};
+
+	edge e2 = {
+		"source": "v1",
+		"destination": "v2",
+		"weight": 2,
+		"relation": "ENEMY"
+	};
+	
+}
+
+dgraph myDgraph2 {
+	/* KOMMENTO */ 
+	
+	vertex v1;
+	vertex v2;
+	edge e1;
+	
+	vertex v3 = {
+		"label": "ver3",
+		
+		/* this is an object property */
+		"names": {
+			"myinner": "object",
+			"randomId": 16432
+		}
+	};
+
+	edge e2 = {
+		"source": "v2",
+		"destination": "v1",
+		"weight": 2,
+		"relation": "ENEMY"
+	};
+	
+}
+
+ugraph myUgraph1 {
+	/* KOMMENTO */ 
+	
+	vertex v1;
+	vertex v2;
+	edge e1;
+	
+	vertex v3 = {
+		"label": "ver3",
+		"names": ["naber", "omer", "sus"]
+	};
+
+	edge e2 = {
+		"source": "v3",
+		"destination": "v2",
+		"weight": 2,
+		"relation": "ENEMY"
+	};
+	
+}
